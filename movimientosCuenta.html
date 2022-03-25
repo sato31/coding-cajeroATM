@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta | E-GO Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containerLogos">
+        <div class="nameBank">
+            <h1>E-GO BANK</h1>
+        </div>
+        <div class="logoBank">
+            <h2>E-GO</h2>
+        </div>
+    </div>
+    <div class="containerWelcome">
+        <h2>Bienvenido usuario</h2>
+    </div>
+
+    <div class="containerFather">
+        <div class="containerButtons">
+            <div class="containerButton">
+                <button class="buttonAction" id="consultaSaldo">
+                    Consultar Saldo
+                </button>
+            </div>
+            <div class="containerButton">
+                <button class="buttonAction" id="ingresaMonto">
+                    Ingresar Monto
+                </button>  
+            </div>
+            <div class="containerButton">
+                <button class="buttonAction" id="retiraMonto">
+                    Retirar Monto
+                </button>
+            </div>
+        </div>
+
+        <div class="containerShowActions">
+            <!-- ETIQUETAS BOTON INGRESAR MONTO -->
+            <label class="none" id="tagIntroMonto" for="monto">Introduzca el monto a ingresar: </label><br>
+            <input type="text" id="introMonto" name="monto"><br>
+            <button class="none" id="buttonConfirmIntro">Confirmar</button>
+    
+            <div class="none" id="showMontoYSaldoIntro">
+                <p class="tagBlue none" id="tagMontoIngresado">Monto Ingresado:</p>
+                <p class="none" id="montoIngresado"></p>
+    
+                <p class="tagBlue none" id="tagNuevoSaldoIntro">Nuevo saldo total:</p>
+            </div>
+            <!-- ETIQUETAS BOTON RETIRAR MONTO -->
+            <label class="none" id="tagRetiroMonto" for="monto">Introduzca el monto a retirar: </label><br>
+            <input type="text" id="retiroMonto" name="monto"><br>
+            <button class="none" id="buttonConfirmRetiro">Confirmar</button>
+    
+            <div class="none" id="showMontoYSaldoRetiro">
+                <p class="tagBlue none" id="tagMontoRetirado">Monto Retirado:</p>
+                <p class="none" id="montoRetirado"></p>
+    
+                <p class="tagBlue none" id="tagNuevoSaldoRetiro">Nuevo saldo total:</p>
+            </div>        
+            <!-- ETIQUETAS BOTON CONSULTA SALDO -->
+            <p class="tagBlue none" id="tagSaldo">Saldo actual:</p>
+            <p class="none" id="saldoTotal">$500.00</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
