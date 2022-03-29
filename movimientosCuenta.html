@@ -13,11 +13,12 @@
             <h1>E-GO BANK</h1>
         </div>
         <div class="logoBank">
-            <h2>E-GO</h2>
+            <!-- <img class="logo" src="images/ATM.png" alt="ATM"> -->
+            <img class="logo" src="images/logo.jpeg" alt="ATM">
         </div>
     </div>
     <div class="containerWelcome">
-        <h2>Bienvenido usuario</h2>
+        <h2 id="welcome"></h2>
     </div>
 
     <div class="containerFather">
@@ -39,34 +40,44 @@
             </div>
         </div>
 
-        <div class="containerShowActions">
+         <div class="containerShowActions none " id="contenedorAcciones"> <!-- ¡¡¡QUITAR NONE EN JS!!! -->
             <!-- ETIQUETAS BOTON INGRESAR MONTO -->
-            <label class="none" id="tagIntroMonto" for="monto">Introduzca el monto a ingresar: </label><br>
-            <input type="text" id="introMonto" name="monto"><br>
-            <button class="none" id="buttonConfirmIntro">Confirmar</button>
+            <div class="none" id="containerIngreso">
+                <label id="tagIntroMonto" for="monto">Introduzca el monto a ingresar: </label><br>
+                <input type="text" id="introMonto" name="monto"><br>
+                <button id="buttonConfirmIntro">Confirmar</button>
     
-            <div class="none" id="showMontoYSaldoIntro">
-                <p class="tagBlue none" id="tagMontoIngresado">Monto Ingresado:</p>
-                <p class="none" id="montoIngresado"></p>
+                <div id="showMontoYSaldoIntro">
+                    <p class="tagBlue" id="tagMontoIngresado">Monto Ingresado:</p>
+                    <p id="montoIngresado"></p>
     
-                <p class="tagBlue none" id="tagNuevoSaldoIntro">Nuevo saldo total:</p>
+                    <p class="tagBlue" id="tagNuevoSaldoIntro">Nuevo saldo total:</p>
+                    <!-- <p id="saldoTotal"></p> -->
+                </div>
             </div>
             <!-- ETIQUETAS BOTON RETIRAR MONTO -->
-            <label class="none" id="tagRetiroMonto" for="monto">Introduzca el monto a retirar: </label><br>
-            <input type="text" id="retiroMonto" name="monto"><br>
-            <button class="none" id="buttonConfirmRetiro">Confirmar</button>
+            <div class="none" id="containerRetiro">
+                <label id="tagRetiroMonto" for="monto">Introduzca el monto a retirar: </label><br>
+                <input type="text" id="retiroMonto" name="monto"><br>
+                <button id="buttonConfirmRetiro">Confirmar</button>
     
-            <div class="none" id="showMontoYSaldoRetiro">
-                <p class="tagBlue none" id="tagMontoRetirado">Monto Retirado:</p>
-                <p class="none" id="montoRetirado"></p>
+                <div id="showMontoYSaldoRetiro">
+                    <p class="tagBlue" id="tagMontoRetirado">Monto Retirado:</p>
+                    <p id="montoRetirado"></p>
     
-                <p class="tagBlue none" id="tagNuevoSaldoRetiro">Nuevo saldo total:</p>
-            </div>        
+                    <p class="tagBlue" id="tagNuevoSaldoRetiro">Nuevo saldo total:</p>
+                    <!-- <p id="saldoTotal"></p> -->
+                </div>        
+            </div>
             <!-- ETIQUETAS BOTON CONSULTA SALDO -->
-            <p class="tagBlue none" id="tagSaldo">Saldo actual:</p>
-            <p class="none" id="saldoTotal">$500.00</p>
+            <div class="none" id="containerSaldo">
+                <p class="tagBlue" id="tagSaldo">Saldo actual:</p>
+                <!-- <p id="saldoTotal">$500.00</p> -->
+            </div>
+            <p id="saldoTotal"></p>
         </div>
     </div>
+    <!-- <script src="main0.js"></script> -->
     <script src="main.js"></script>
 </body>
 </html>
