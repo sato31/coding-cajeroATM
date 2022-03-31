@@ -197,4 +197,13 @@ function cierraSesion(){
     contenedorAcciones.classList.add('none')
     buttonLogout.classList.add('none')
 
+    if(usuarioActual==='Edrei Hernández'){
+        user[0].saldo = saldoActual
+    }
+    else if(usuarioActual==='Goretty Flores'){
+        user[1].saldo = saldoActual
+    }
+    else if(usuarioActual==='Oscar Sánchez'){
+        user[2].saldo = saldoActual
+    }
 }
