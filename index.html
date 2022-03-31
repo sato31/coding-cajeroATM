@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuenta | E-GO Bank</title>
-    <link rel="stylesheet" href="estilos/edreiStyles.css">
+    <link rel="stylesheet" href="ramaEdrei/edreiStyles.css">
     <link rel="stylesheet" href="estilos/goreEstilos.css">
     <link rel="stylesheet" href="estilos/oscarStyle.css">
 </head>
@@ -55,6 +55,9 @@
         <div class="ingresa-contraseña">
             <label id="tagIntroPassword" for="pass">Ingresa tu contraseña: </label><br>
             <input type="password" id="introPassword" name="pass">
+        </div>
+        <div class="none" id="containerError">
+            <p>Contraseña incorrecta. Inténtelo nuevamente.</p>
         </div>
         <div class="contenedor-boton-ingresar">
             <button class="boton" id="botonLogin">Ingresar</button>
@@ -121,6 +124,11 @@
                 <p id="saldoTotal"></p>
             </div>
         </div>
+    </div>
+    <div id="back">
+        <button class="buttonBack none" id="buttonBackStart">Regresar</button>
+        <div id="void"></div>
+        <button class="buttonBack none" id="buttonLogout">Cerrar<br>sesión</button>
     </div>
 <!-- FIN OSCAR -->
     <script src="main.js"></script>

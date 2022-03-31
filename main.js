@@ -58,6 +58,7 @@ buttonEdrei.addEventListener('click', function asignaUsuario0(){
     faceUsuario0.classList.remove('none')
     faceUsuario1.classList.add('none')
     faceUsuario2.classList.add('none')
+    buttonBackStart.classList.remove('none')
     nameUser.innerHTML = (usuarioActual)
 })
 buttonGore.addEventListener('click', function asignaUsuario1(){
@@ -69,6 +70,7 @@ buttonGore.addEventListener('click', function asignaUsuario1(){
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.remove('none')
     faceUsuario2.classList.add('none')
+    buttonBackStart.classList.remove('none')
     nameUser.innerHTML = (usuarioActual)   
 })
 buttonOscar.addEventListener('click', function asignaUsuario2(){
@@ -80,6 +82,7 @@ buttonOscar.addEventListener('click', function asignaUsuario2(){
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.add('none')
     faceUsuario2.classList.remove('none')
+    buttonBackStart.classList.remove('none')
     nameUser.innerHTML = (usuarioActual)
 })
 
@@ -92,15 +95,19 @@ retiraMonto.addEventListener('click', retira)
 buttonConfirmIntro.addEventListener('click', deposito)
 buttonConfirmRetiro.addEventListener('click', retirar)
 
+buttonBackStart.addEventListener('click', regresa)
+buttonLogout.addEventListener('click', cierraSesion)
+
 function autenticarUsuario(){
     if (introPassword.value === passActual){ 
-        alert('Contraseña aceptada')
         loginUsuario.classList.add('none')
         containerButtonsActions.classList.remove('none')
+        buttonBackStart.classList.add('none')
+        buttonLogout.classList.remove('none')
         welcomeUser()
         }
     else{
-        alert('Contraseña incorrecta. Intentelo de nuevo.')
+        containerError.classList.remove('none')
     }
 }
 
@@ -168,4 +175,25 @@ function retirar() {
     }
     retiroMonto.value=''
     
+}
+
+function regresa(){
+    loginUsuario.classList.add('none')
+    containerCuentas.classList.remove('none')
+    buttonBackStart.classList.add('none')
+}
+
+function cierraSesion(){
+    containerCuentas.classList.remove('none')
+
+    loginUsuario.classList.add('none')
+    faceUsuario0.classList.add('none')
+    faceUsuario1.classList.add('none')
+    faceUsuario2.classList.add('none')
+
+    bienvenida.classList.add('none')
+    containerButtonsActions.classList.add('none')
+    contenedorAcciones.classList.add('none')
+    buttonLogout.classList.add('none')
+
 }

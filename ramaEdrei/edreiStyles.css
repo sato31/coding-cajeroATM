@@ -1,6 +1,7 @@
 body {
     /* background-color: #0B3A97; */
-    background-image: url('./images/bitcoin.png');
+    background-image: url('./img/bitcoin.png');
+    background-size: 350px;
     background-repeat: no-repeat;
     background-position: 0% 100%;
     background-attachment: fixed;

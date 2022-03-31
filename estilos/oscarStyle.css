@@ -26,6 +26,10 @@ input{
     height: 75px;
 }
 
+#containerError{
+    text-align: center ;
+}
+
 .containerWelcome{
     text-align: center;
 }
@@ -54,7 +58,7 @@ input{
     cursor: pointer;
 }
 
-.buttonAction:hover {
+.buttonAction:hover, .buttonBack:hover {
     background-color: #2257bf; 
     color: rgb(194, 194, 194);
 }
@@ -102,6 +106,28 @@ input{
     height: 25px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+#back{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#void{
+    padding: 50px;
+}
+
+.buttonBack{
+    width: 100px;
+    height: 70px;
+    margin: 15px 0px;
+    background-color:#01b4f5;
+    color: white;
+    font-size: 18px;
+    border-radius: 1px;
+    border: 1px;
+    cursor: pointer;
 }
 
 .none {
