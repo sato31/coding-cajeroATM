@@ -105,6 +105,7 @@ function autenticarUsuario(){
         buttonBackStart.classList.add('none')
         buttonLogout.classList.remove('none')
         welcomeUser()
+        introPassword.value = ''
         }
     else{
         containerError.classList.remove('none')
