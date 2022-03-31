@@ -34,107 +34,29 @@ var buttonEdrei = document.getElementById('buttonEdrei')
 var buttonGore = document.getElementById('buttonGore')
 var buttonOscar = document.getElementById('buttonOscar')
 
-var botonLogin = document.getElementById('botonLogin')
-
-var consultaSaldo = document.getElementById('consultaSaldo')
-var IngresaMonto = document.getElementById('ingresaMonto')
-var retiraMonto = document.getElementById('retiraMonto')
-
-//VARIABLES A SUSTITUIR EN HTML
-var nameUser = document.getElementById('nameUser')
-var welcome = document.getElementById('welcome')
-var saldoTotal = document.getElementById('saldoTotal')
-
-
 buttonEdrei.addEventListener('click', function asignaUsuario0(){
     usuarioActual = user[0].nombre
     saldoActual = user[0].saldo
     passActual = user[0].password
     containerCuentas.classList.add('none')
-    loginUsuario.classList.remove('none')
-    faceUsuario0.classList.remove('none')
     faceUsuario1.classList.add('none')
     faceUsuario2.classList.add('none')
-    nameUser.innerHTML = (usuarioActual)
+
 })
 buttonGore.addEventListener('click', function asignaUsuario1(){
     usuarioActual = user[1].nombre
     saldoActual = user[1].saldo
-    passActual = user[1].password
+    passActual = user[1].password  
     containerCuentas.classList.add('none')
-    loginUsuario.classList.remove('none')
     faceUsuario0.classList.add('none')
-    faceUsuario1.classList.remove('none')
     faceUsuario2.classList.add('none')
-    nameUser.innerHTML = (usuarioActual)   
 })
 buttonOscar.addEventListener('click', function asignaUsuario2(){
     usuarioActual = user[2].nombre
     saldoActual = user[2].saldo
     passActual = user[2].password
     containerCuentas.classList.add('none')
-    loginUsuario.classList.remove('none')
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.add('none')
-    faceUsuario2.classList.remove('none')
-    nameUser.innerHTML = (usuarioActual)
 })
 
-botonLogin.addEventListener('click', autenticarUsuario)
-
-function autenticarUsuario(){
-    if (introPassword.value === passActual){ 
-        console.log('Bienvenido(a) ' + usuarioActual)
-        loginUsuario.classList.add('none')
-        containerButtonsActions.classList.remove('none')
-        welcomeUser()
-        saldoUsuario()
-        }
-    else{
-        console.log('Intentelo de nuevo ')
-    }
-}
-
-function welcomeUser(){
-    bienvenida.classList.remove('none')
-    welcome.innerHTML = ('Bienvenido ' + usuarioActual)
-}
-
-function muestraAccionesBotones(){
-    consultaSaldo.addEventListener('click', () => { 
-        contenedorAcciones.classList.remove('none')
-        containerIngreso.classList.add('none')
-        containerRetiro.classList.add('none')
-        containerSaldo.classList.remove('none')
-    })
-    
-    IngresaMonto.addEventListener('click', () => { 
-        contenedorAcciones.classList.remove('none')
-        containerIngreso.classList.remove('none')
-        containerRetiro.classList.add('none')
-        containerSaldo.classList.add('none')
-    })
-    
-    retiraMonto.addEventListener('click', () => { 
-        contenedorAcciones.classList.remove('none')
-        containerIngreso.classList.add('none')
-        containerRetiro.classList.remove('none')
-        containerSaldo.classList.add('none')
-    })
-}
-
-function saldoUsuario(){
-    saldoTotal.innerHTML = ('$' + saldoActual)
-}
-
-function añadeMonto(){
-
-}
-
-function restaMonto(){
-
-}
-
-muestraAccionesBotones()
-añadeMonto()
-restaMonto()

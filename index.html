@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuenta | E-GO Bank</title>
+    <link rel="stylesheet" href="ramaEdrei/styles.css">
+    <link rel="stylesheet" href="ramaGore/estilos.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,16 +15,60 @@
             <h1>E-GO BANK</h1>
         </div>
         <div class="logoBank">
-            <!-- <img class="logo" src="images/ATM.png" alt="ATM"> -->
             <img class="logo" src="images/logo.jpeg" alt="ATM">
         </div>
     </div>
-    <div class="containerWelcome">
-        <h2 id="welcome"></h2>
+<!-- INICIO EDREI -->
+<div id = "containerCuentas">
+    <div id="selectContainer" class="parent2">
+        <div class="div3">
+            <h3>Seleccione una cuenta: </h3>
+        </div>
+    </div>
+    
+    <div id="buttonContainer" class="parent3">
+        <div class="div4">
+            <button class="button" id="buttonEdrei">Edrei Hernández</button>
+        </div>
+        <div class="div5">
+            <button class="button" id="buttonGore">Goretty Flores</button>
+        </div>
+        <div class="div6">
+            <button class="button" id="buttonOscar">Oscar Sánchez</button>
+        </div>
+    </div>
+</div>
+<!-- FIN EDREI -->
+
+<!-- INICIO GORE -->
+    <div class="contenedor-usuario0 " id="loginUsuario"><!--  -->
+        <div class="foto-usuario0 " id="faceUsuario0"> <!--  -->
+            <img class="imagen-usuario" src="images/usuario0.png" /><!-- CAMBIAR IMAGEN USUARIO0 -->
+        </div>
+        <div class="foto-usuario1 " id="faceUsuario1"> <!--  -->
+            <img class="imagen-usuario" src="images/usuario1.jpeg" />
+        </div>
+        <div class="foto-usuario2 " id="faceUsuario2"> <!--  --> 
+            <img class="imagen-usuario" src="images/usuario2.png" />
+        </div>
+        <h2 class="nombre-usuario" id="nameUser">Nombre Usuario</h2> <!-- SE AGREGARÁ EL NOMBRE DE USUARIO CON JS -->
+        <div class="ingresa-contraseña">
+            <label id="tagIntroPassword" for="pass">Ingresa tu contraseña: </label><br>
+            <input type="password" id="introPassword" name="pass">
+        </div>
+        <div class="contenedor-boton-ingresar">
+            <button class="boton" id="botonLogin">Ingresar</button>
+        </div>
+    </div>
+<!-- FIN GORE -->
+
+<!-- INICIO OSCAR -->
+    <div class="containerWelcome " id="bienvenida"><!--  -->
+        <h2 id="welcome">Bienvenido usuario</h2>
     </div>
 
     <div class="containerFather">
-        <div class="containerButtons">
+        <div class="containerButtons " id="containerButtonsActions"><!--  -->
             <div class="containerButton">
                 <button class="buttonAction" id="consultaSaldo">
                     Consultar Saldo
@@ -40,7 +86,7 @@
             </div>
         </div>
 
-         <div class="containerShowActions none " id="contenedorAcciones"> <!-- ¡¡¡QUITAR NONE EN JS!!! -->
+         <div class="containerShowActions " id="contenedorAcciones"> <!--  -->
             <!-- ETIQUETAS BOTON INGRESAR MONTO -->
             <div class="none" id="containerIngreso">
                 <label id="tagIntroMonto" for="monto">Introduzca el monto a ingresar: </label><br>
@@ -77,7 +123,7 @@
             <p id="saldoTotal"></p>
         </div>
     </div>
-    <!-- <script src="main0.js"></script> -->
-    <script src="main.js"></script>
+<!-- FIN OSCAR -->
+    <script src="main0.js"></script>
 </body>
 </html>

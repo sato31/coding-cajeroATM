@@ -5,7 +5,7 @@ body{
 }
 
 input{
-    margin: 10px 0px 5px 0px;
+    /* margin: 10px 0px 5px 0px; */
     height: 30px;
     width: 150px;
     background-color: whitesmoke;
@@ -68,7 +68,7 @@ input{
     font-size: 20px;
 }
 
-#buttonConfirmIntro, #buttonConfirmRetiro{
+#buttonConfirmIntro, #buttonConfirmRetiro, .boton{
     width: 150px;
     height: 35px;
     margin: 5px 0px 10px 1px;
@@ -80,7 +80,7 @@ input{
     cursor: pointer;
 }
 
-#buttonConfirmIntro:hover, #buttonConfirmRetiro:hover {
+#buttonConfirmIntro:hover, #buttonConfirmRetiro:hover, .boton:hover{
     background-color: #bb0051; 
     color: rgb(194, 194, 194);
 }
@@ -89,6 +89,10 @@ input{
     color: #01b4f5;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+#introMonto, #retiroMonto{
+    margin: 10px 0px 5px 0px;
 }
 
 #montoIngresado, #montoRetirado, #saldoTotal{
@@ -103,3 +107,4 @@ input{
 .none {
     display: none;
 }
+
