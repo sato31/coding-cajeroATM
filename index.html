@@ -41,14 +41,14 @@
 <!-- FIN EDREI -->
 
 <!-- INICIO GORE -->
-    <div class="contenedor-usuario0 " id="loginUsuario"><!--  -->
-        <div class="foto-usuario0 " id="faceUsuario0"> <!--  -->
+    <div class="contenedor-usuario0 none" id="loginUsuario"><!--  -->
+        <div class="foto-usuario0 none" id="faceUsuario0"> <!--  -->
             <img class="imagen-usuario" src="images/usuario0.png" /><!-- CAMBIAR IMAGEN USUARIO0 -->
         </div>
-        <div class="foto-usuario1 " id="faceUsuario1"> <!--  -->
+        <div class="foto-usuario1 none" id="faceUsuario1"> <!--  -->
             <img class="imagen-usuario" src="images/usuario1.jpeg" />
         </div>
-        <div class="foto-usuario2 " id="faceUsuario2"> <!--  --> 
+        <div class="foto-usuario2 none" id="faceUsuario2"> <!--  --> 
             <img class="imagen-usuario" src="images/usuario2.png" />
         </div>
         <h2 class="nombre-usuario" id="nameUser">Nombre Usuario</h2> <!-- SE AGREGARÁ EL NOMBRE DE USUARIO CON JS -->
@@ -63,12 +63,12 @@
 <!-- FIN GORE -->
 
 <!-- INICIO OSCAR -->
-    <div class="containerWelcome " id="bienvenida"><!--  -->
+    <div class="containerWelcome none" id="bienvenida"><!--  -->
         <h2 id="welcome">Bienvenido usuario</h2>
     </div>
 
     <div class="containerFather">
-        <div class="containerButtons " id="containerButtonsActions"><!--  -->
+        <div class="containerButtons none" id="containerButtonsActions"><!--  -->
             <div class="containerButton">
                 <button class="buttonAction" id="consultaSaldo">
                     Consultar Saldo
@@ -86,19 +86,18 @@
             </div>
         </div>
 
-         <div class="containerShowActions " id="contenedorAcciones"> <!--  -->
+         <div class="containerShowActions none" id="contenedorAcciones"> <!--  -->
             <!-- ETIQUETAS BOTON INGRESAR MONTO -->
             <div class="none" id="containerIngreso">
                 <label id="tagIntroMonto" for="monto">Introduzca el monto a ingresar: </label><br>
                 <input type="text" id="introMonto" name="monto"><br>
                 <button id="buttonConfirmIntro">Confirmar</button>
     
-                <div id="showMontoYSaldoIntro">
+                <div class="none" id="showMontoYSaldoIntro">
                     <p class="tagBlue" id="tagMontoIngresado">Monto Ingresado:</p>
                     <p id="montoIngresado"></p>
     
                     <p class="tagBlue" id="tagNuevoSaldoIntro">Nuevo saldo total:</p>
-                    <!-- <p id="saldoTotal"></p> -->
                 </div>
             </div>
             <!-- ETIQUETAS BOTON RETIRAR MONTO -->
@@ -107,23 +106,23 @@
                 <input type="text" id="retiroMonto" name="monto"><br>
                 <button id="buttonConfirmRetiro">Confirmar</button>
     
-                <div id="showMontoYSaldoRetiro">
+                <div class="none" id="showMontoYSaldoRetiro">
                     <p class="tagBlue" id="tagMontoRetirado">Monto Retirado:</p>
                     <p id="montoRetirado"></p>
     
                     <p class="tagBlue" id="tagNuevoSaldoRetiro">Nuevo saldo total:</p>
-                    <!-- <p id="saldoTotal"></p> -->
                 </div>        
             </div>
             <!-- ETIQUETAS BOTON CONSULTA SALDO -->
             <div class="none" id="containerSaldo">
                 <p class="tagBlue" id="tagSaldo">Saldo actual:</p>
-                <!-- <p id="saldoTotal">$500.00</p> -->
             </div>
-            <p id="saldoTotal"></p>
+            <div class="none" id="saldo">
+                <p id="saldoTotal"></p>
+            </div>
         </div>
     </div>
 <!-- FIN OSCAR -->
-    <script src="main0.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

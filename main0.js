@@ -58,5 +58,10 @@ buttonOscar.addEventListener('click', function asignaUsuario2(){
     containerCuentas.classList.add('none')
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.add('none')
+    faceUsuario2.classList.remove('none')
+    nameUser.innerHTML = (usuarioActual)
+    bienvenida.classList.remove('none')
+    containerButtonsActions.classList.remove('none')
+
 })
 
