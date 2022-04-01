@@ -188,7 +188,7 @@ function cierraSesion(){
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.add('none')
     faceUsuario2.classList.add('none')
-    containerError.classList.remove('none')
+    containerError.classList.add('none')
 
     bienvenida.classList.add('none')
     containerButtonsActions.classList.add('none')
