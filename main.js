@@ -143,9 +143,6 @@ function retira(){
     saldo.classList.add('none')
 }
 
-// function saldoUsuario(){
-//     saldoTotal.innerHTML = ('$' + saldoActual)
-// }
 var dinero
 function deposito(){
     showMontoYSaldoIntro.classList.remove('none')
@@ -175,7 +172,6 @@ function retirar() {
         alert('El monto no pudo ser retirado.\nRecuerde que el saldo mínimo es de $10.00 MXN')
     }
     retiroMonto.value=''
-    
 }
 
 function regresa(){
