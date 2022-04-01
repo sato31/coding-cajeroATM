@@ -52,16 +52,25 @@ buttonGore.addEventListener('click', function asignaUsuario1(){
     saldoActual = user[1].saldo
     passActual = user[1].password  
     containerCuentas.classList.add('none')
+    loginUsuario.classList.remove('none')
     faceUsuario0.classList.add('none')
     faceUsuario2.classList.add('none')
+    nameUser.innerHTML = 'Goretty Flores'
+    bienvenida.classList.add('none')
+    containerButtonsActions.classList.add('none')
 })
 buttonOscar.addEventListener('click', function asignaUsuario2(){
     usuarioActual = user[2].nombre
     saldoActual = user[2].saldo
     passActual = user[2].password
     containerCuentas.classList.add('none')
+    loginUsuario.classList.remove('none')
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.add('none')
+    nameUser.innerHTML = 'Oscar Sánchez'
+    bienvenida.classList.add('none')
+    containerButtonsActions.classList.add('none')
+
 })
 
 // Validación de Contraseña
@@ -81,7 +90,7 @@ function validate () {
         welcome.innerHTML = usuarioActual
         containerButtonsActions.classList.remove('none')
     }else {
-        alert('Contraseña incorrecta')
+        alert('Contraseña incorrecta. Inténtelo de nuevo.')
     }
 }
 
@@ -129,6 +138,15 @@ function deposito() {
     montoIngresado.innerHTML ='$' + introMonto.value + ' MXN'
     // acumulado = saldoActual + 
     saldoTotal.innerHTML ='$' + (saldoActual + parseFloat(introMonto.value)) + ' MXN'
+
+    if ((saldoActual + parseFloat(introMonto.value)) > 990) {
+        alert('Suma no permitida. Ingrese una cantidad menor.')
+        montoIngresado.classList.add('none')
+        saldoTotal.classList.add('none')
+    }else {
+        montoIngresado.classList.remove('none')
+        saldoTotal.classList.remove('none')
+    }
 }
 
 //  Retirar monto
@@ -142,6 +160,16 @@ buttonConfirmRetiro.addEventListener('click', retirar)
 function retirar () {
     montoRetirado.innerHTML = '$' + retiroMonto.value + ' MXN'
     saldoTotalRetiro.innerHTML = '$' + (saldoActual - parseFloat(retiroMonto.value)) + ' MXN'
+
+    
+    if ((saldoActual - parseFloat(retiroMonto.value)) < 10) {
+        alert('Movimiento no permitido. Retire una cantidad menor.')
+        saldoTotalRetiro.classList.add('none')
+        montoRetirado.classList.add('none')
+    }else {
+        saldoTotalRetiro.classList.remove('none')
+        montoRetirado.classList.remove('none')
+    }
 }
 
 
