@@ -48,7 +48,7 @@ var nameUser = document.getElementById('nameUser')
 var welcome = document.getElementById('welcome')
 var saldoTotal = document.getElementById('saldoTotal')
 
-
+//BOTONES DE USUARIOS
 buttonEdrei.addEventListener('click', function asignaUsuario0(){
     usuarioActual = user[0].nombre
     saldoActual = user[0].saldo
@@ -85,19 +85,20 @@ buttonOscar.addEventListener('click', function asignaUsuario2(){
     buttonBackStart.classList.remove('none')
     nameUser.innerHTML = (usuarioActual)
 })
-
+//BOTONES LOGIN
 botonLogin.addEventListener('click', autenticarUsuario)
-
+//BOTNES ACCIONES(CONSULTA, DEPOSITO Y RETIRO)
 consultaSaldo.addEventListener('click', consulta)
 ingresaMonto.addEventListener('click', ingresa)
 retiraMonto.addEventListener('click', retira)
-
+//BOTONES DE CONFIRMACIÓN
 buttonConfirmIntro.addEventListener('click', deposito)
 buttonConfirmRetiro.addEventListener('click', retirar)
-
+//BOTONES DE RETORNO
 buttonBackStart.addEventListener('click', regresa)
 buttonLogout.addEventListener('click', cierraSesion)
 
+//DECLARACIÓN DE FUNCIONES
 function autenticarUsuario(){
     if (introPassword.value === passActual){ 
         loginUsuario.classList.add('none')
@@ -116,7 +117,7 @@ function welcomeUser(){
     bienvenida.classList.remove('none')
     welcome.innerHTML = ('Bienvenido ' + usuarioActual)
 }
-
+//DINAMISMO BOTONES DE ACCIONES
 function consulta() { 
     contenedorAcciones.classList.remove('none')
     containerIngreso.classList.add('none')
@@ -142,7 +143,7 @@ function retira(){
     showMontoYSaldoRetiro.classList.add('none')
     saldo.classList.add('none')
 }
-
+//RETIRAR Y DEPOSITAR CON REGLA DE NEGOCIO
 var dinero
 function deposito(){
     showMontoYSaldoIntro.classList.remove('none')
@@ -173,7 +174,7 @@ function retirar() {
     }
     retiroMonto.value=''
 }
-
+//FUNCIONES BOTONES DE RETORNO
 function regresa(){
     loginUsuario.classList.add('none')
     containerCuentas.classList.remove('none')
@@ -187,12 +188,13 @@ function cierraSesion(){
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.add('none')
     faceUsuario2.classList.add('none')
+    containerError.classList.remove('none')
 
     bienvenida.classList.add('none')
     containerButtonsActions.classList.add('none')
     contenedorAcciones.classList.add('none')
     buttonLogout.classList.add('none')
-
+//ACTUALIZA SALDO EN EL ARREGLO DE OBJETOS
     if(usuarioActual==='Edrei Hernández'){
         user[0].saldo = saldoActual
     }
