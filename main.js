@@ -47,6 +47,8 @@ var buttonConfirmRetiro = document.getElementById('buttonConfirmRetiro')
 var nameUser = document.getElementById('nameUser')
 var welcome = document.getElementById('welcome')
 var saldoTotal = document.getElementById('saldoTotal')
+var depositoError = document.getElementById('depositoError')
+var retiroError = document.getElementById('retiroError')
 
 //BOTONES DE USUARIOS
 buttonEdrei.addEventListener('click', function asignaUsuario0(){
@@ -150,12 +152,15 @@ function deposito(){
     saldo.classList.remove('none')
     dinero = parseFloat(introMonto.value)
     if((saldoActual + dinero) <= 990){
+        depositoError.classList.add('none') //oculta el párrafo con id depositoError por si el depósito anterior fue invalido
         montoIngresado.innerHTML = '$' + introMonto.value + ' MXN'
         saldoActual = saldoActual + dinero
         saldoTotal.innerHTML = '$' + saldoActual.toFixed(2) + ' MXN'
     }
-    else{
-        alert('El monto no pudo ser ingresado.\n Recuerde que el saldo máximo es de $990.00 MXN')
+    else {
+        montoIngresado.innerHTML = '' //borra el último monto ingresado
+        depositoError.innerHTML= ('El monto no pudo ser ingresado. Recuerde que el saldo máximo es de $990.00 MXN')
+        depositoError.classList.remove('none') //Remueve la clase none para que se muestre el error
     }
     introMonto.value=''
 }
@@ -165,12 +170,15 @@ function retirar() {
     saldo.classList.remove('none')
     dinero = parseFloat(retiroMonto.value)
     if((saldoActual - dinero) >= 10){
+        retiroError.classList.add('none') //oculta el párrafo con id retiroError por si el retiro anterior fue invalido
         montoRetirado.innerHTML = '$' + retiroMonto.value + ' MXN'
         saldoActual = saldoActual - dinero
         saldoTotal.innerHTML = '$' + saldoActual.toFixed(2) + ' MXN'
     }
     else{
-        alert('El monto no pudo ser retirado.\nRecuerde que el saldo mínimo es de $10.00 MXN')
+        montoRetirado.innerHTML = '' //borra el último monto retirado
+        retiroError.innerHTML = ('El monto no pudo ser retirado. Recuerde que el saldo mínimo es de $10.00 MXN')
+        retiroError.classList.remove('none') //Remueve la clase none para que se muestre el error
     }
     retiroMonto.value=''
 }

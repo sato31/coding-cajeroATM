@@ -93,12 +93,13 @@
             <!-- ETIQUETAS BOTON INGRESAR MONTO -->
             <div class="none" id="containerIngreso">
                 <label id="tagIntroMonto" for="monto">Introduzca el monto a ingresar: </label><br>
-                <input type="text" id="introMonto" name="monto"><br>
+                <input type="number" id="introMonto" name="monto"><br>
                 <button id="buttonConfirmIntro">Confirmar</button>
     
                 <div class="none" id="showMontoYSaldoIntro">
                     <p class="tagBlue" id="tagMontoIngresado">Monto Ingresado:</p>
                     <p id="montoIngresado"></p>
+                    <p class="none" id="depositoError"></p>
     
                     <p class="tagBlue" id="tagNuevoSaldoIntro">Nuevo saldo total:</p>
                 </div>
@@ -106,12 +107,13 @@
             <!-- ETIQUETAS BOTON RETIRAR MONTO -->
             <div class="none" id="containerRetiro">
                 <label id="tagRetiroMonto" for="monto">Introduzca el monto a retirar: </label><br>
-                <input type="text" id="retiroMonto" name="monto"><br>
+                <input type="number" id="retiroMonto" name="monto"><br>
                 <button id="buttonConfirmRetiro">Confirmar</button>
     
                 <div class="none" id="showMontoYSaldoRetiro">
                     <p class="tagBlue" id="tagMontoRetirado">Monto Retirado:</p>
                     <p id="montoRetirado"></p>
+                    <p class="none" id="retiroError"></p>
     
                     <p class="tagBlue" id="tagNuevoSaldoRetiro">Nuevo saldo total:</p>
                 </div>        
