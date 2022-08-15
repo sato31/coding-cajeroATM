@@ -53,7 +53,7 @@ input{
     background-color:#01b4f5;
     color: white;
     font-size: 20px;
-    border-radius: 1px;
+    border-radius: 2px;
     border: 1px;
     cursor: pointer;
 }
@@ -79,7 +79,7 @@ input{
     background-color: #f6006b;
     color: white;
     font-size: 20px;
-    border-radius: 1px;
+    border-radius: 2px;
     border: 1px;
     cursor: pointer;
 }
@@ -125,7 +125,7 @@ input{
     background-color:#01b4f5;
     color: white;
     font-size: 18px;
-    border-radius: 1px;
+    border-radius: 2px;
     border: 1px;
     cursor: pointer;
 }

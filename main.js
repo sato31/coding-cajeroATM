@@ -58,6 +58,7 @@ buttonEdrei.addEventListener('click', function asignaUsuario0(){
     faceUsuario0.classList.remove('none')
     faceUsuario1.classList.add('none')
     faceUsuario2.classList.add('none')
+    containerError.classList.add('none')
     buttonBackStart.classList.remove('none')
     nameUser.innerHTML = (usuarioActual)
 })
@@ -70,6 +71,7 @@ buttonGore.addEventListener('click', function asignaUsuario1(){
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.remove('none')
     faceUsuario2.classList.add('none')
+    containerError.classList.add('none')
     buttonBackStart.classList.remove('none')
     nameUser.innerHTML = (usuarioActual)   
 })
@@ -82,6 +84,7 @@ buttonOscar.addEventListener('click', function asignaUsuario2(){
     faceUsuario0.classList.add('none')
     faceUsuario1.classList.add('none')
     faceUsuario2.classList.remove('none')
+    containerError.classList.add('none')
     buttonBackStart.classList.remove('none')
     nameUser.innerHTML = (usuarioActual)
 })
@@ -109,6 +112,7 @@ function autenticarUsuario(){
         introPassword.value = ''
         }
     else{
+        introPassword.value = ''
         containerError.classList.remove('none')
     }
 }
